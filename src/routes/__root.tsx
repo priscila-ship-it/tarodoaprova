@@ -138,14 +138,14 @@ function SiteNav() {
       >
         <Link to="/" className="flex min-w-0 items-center gap-2">
           <PortalMark className="h-6 w-auto shrink-0 text-gold" />
-          <span className="truncate font-display text-lg text-mist">Tarô da Aprovação</span>
+          <span className="truncate font-display text-base text-mist sm:text-lg">Tarô da Aprovação</span>
         </Link>
         <ul className="flex items-center gap-1">
           {navLinks.map((link) => (
             <li key={link.to}>
               <Link
                 to={link.to}
-                className="rounded-full px-2.5 py-1.5 text-[0.72rem] font-medium text-mist/65 transition-colors hover:text-mist sm:text-sm"
+                className="rounded-full px-2 py-1.5 text-[0.7rem] font-medium text-mist/65 transition-colors hover:text-mist sm:text-sm"
                 activeProps={{ className: "text-gold" }}
                 activeOptions={{ exact: link.to === "/" }}
               >

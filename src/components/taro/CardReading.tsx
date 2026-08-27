@@ -66,14 +66,14 @@ export function CardReading({
 
       <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:items-center">
         <RitualButton
-          onClick={onAccept}
-          disabled={accepted}
+          onClick={accepted ? undefined : onAccept}
+          aria-disabled={accepted}
           variant={accepted ? "outline" : "primary"}
           aria-live="polite"
         >
           {accepted ? "Convite aceito ✦" : "Aceitar o convite"}
         </RitualButton>
-        <RitualButton onClick={onSave} variant="outline" disabled={saved}>
+        <RitualButton onClick={saved ? undefined : onSave} aria-disabled={saved} variant="outline">
           {saved ? "Carta guardada na jornada ✦" : "Guardar esta carta"}
         </RitualButton>
       </div>
