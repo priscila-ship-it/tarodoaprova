@@ -53,7 +53,7 @@ export function addEntry(cardId: string): JourneyEntry {
 export function updateLatest(patch: Partial<JourneyEntry>) {
   const entries = readJourney();
   if (entries.length === 0) return;
-  entries[0] = { ...entries[0], ...patch };
+  entries[0] = { ...(entries[0] as JourneyEntry), ...patch };
   writeJourney(entries);
 }
 

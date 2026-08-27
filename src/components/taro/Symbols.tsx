@@ -120,7 +120,8 @@ export function FamilyIcon({
   symbol: FamilySymbol;
   className?: string;
 }) {
-  if (symbol === "chave") return <KeyIcon className={className} />;
-  if (symbol === "olho") return <EyeIcon className={className} />;
-  return <StarIcon className={className} />;
+  const cls = className ?? "";
+  if (symbol === "chave") return <KeyIcon className={cls} />;
+  if (symbol === "olho") return <EyeIcon className={cls} />;
+  return <StarIcon className={cls} />;
 }

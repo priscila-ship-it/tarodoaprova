@@ -126,5 +126,5 @@ export function drawCard(lastCardId?: string): TarotCard {
     pool.length > 1 && lastCardId
       ? pool.filter((c) => c.id !== lastCardId)
       : pool;
-  return candidates[Math.floor(Math.random() * candidates.length)];
+  return candidates[Math.floor(Math.random() * candidates.length)] as TarotCard;
 }
